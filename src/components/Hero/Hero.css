@@ -1,0 +1,11 @@
+.hero {
+    background-image: url(../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png);
+    display: flex;
+    justify-content: center;
+}
+
+.hero__content {
+    padding: 0;
+    margin-top: 160px;
+    margin-bottom: 80px;
+}

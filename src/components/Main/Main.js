@@ -1,6 +1,8 @@
+import Hero from "../Hero/Hero";
+
 function Main() {
     return (
-      <p>A Main Block</p>
+      <Hero />
     );
   }
   
