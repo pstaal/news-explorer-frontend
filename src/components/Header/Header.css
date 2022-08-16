@@ -16,4 +16,22 @@
     font-size: 20px;
     line-height: 1.2;
     margin: 30px 0 26px 104px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .header__logo {
+        margin: 23px 0 18px 40px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .header__logo {
+        margin: 16px 0 16px 16px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
 }
