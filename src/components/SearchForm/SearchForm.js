@@ -9,7 +9,8 @@ function SearchForm() {
         setSearchTerm(event.target.value);
     }
 
-    const submitSearch = () => {
+    const submitSearch = (event) => {
+        event.preventDefault();
         //send search to api
         console.log(searchTerm)
     }
