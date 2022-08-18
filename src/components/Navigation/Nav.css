@@ -57,6 +57,10 @@
         display:none;
     }
 
+    .nav__item-active {
+        border-bottom: none;
+    }
+
     .header__menu-active > nav {
         display: block;
     }

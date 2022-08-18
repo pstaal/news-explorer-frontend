@@ -1,7 +1,7 @@
 import './SearchForm.css';
 import React from 'react';
 
-function SearchForm() {
+function SearchForm(props) {
 
     const [searchTerm, setSearchTerm] = React.useState('');
 
@@ -12,7 +12,7 @@ function SearchForm() {
     const submitSearch = (event) => {
         event.preventDefault();
         //send search to api
-        console.log(searchTerm)
+        props.onSubmit(searchTerm)
     }
 
     return (
