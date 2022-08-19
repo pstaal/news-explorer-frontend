@@ -7,6 +7,10 @@
     color:#fff;
 }
 
+.nav.nav-black {
+    color: #000;
+}
+
 .nav__item {
     margin: 30px 42px 0 0;
     font-weight: 500;
@@ -31,8 +35,16 @@
     cursor: pointer;
 }
 
+.nav__button.nav-black {
+    border: 1px solid #000;
+}
+
 .nav__item-active {
     border-bottom: #fff 3px solid;
+}
+
+.nav__item-active.nav-black {
+    border-bottom: #000 3px solid;
 }
 
 @media screen and (max-width: 1000px) {
@@ -58,6 +70,10 @@
     }
 
     .nav__item-active {
+        border-bottom: none;
+    }
+
+    .nav__item-active.nav-black {
         border-bottom: none;
     }
 

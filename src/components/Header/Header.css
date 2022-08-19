@@ -11,6 +11,10 @@
     transition: all 0.3s ease-in-out;
 }
 
+.header.header-black {
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+}
+
 .header__logo {
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
@@ -21,6 +25,10 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+
+.header__logo.header-black {
+    color: #000;
 }
 
 .header__hamburger {
@@ -35,6 +43,10 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: #fff;
+}
+
+.header__hamburger-bar.header-black {
+    background-color: #000;
 }
 
 .header__wrapper {
@@ -60,14 +72,24 @@
         margin: 24px 30px 0 0;
         cursor: pointer;
     }
+
     .header.header__menu-active {
         background-color: #000;
         flex-direction: column;
         box-shadow: none;
     }
 
+    .header.header__menu-active.header-black {
+        background-color: #fff;
+    }
+
+
     .header__menu-active .header__wrapper {
         box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+    }
+
+    .header__menu-active .header__wrapper.header-black {
+        box-shadow: inset 0px -1px 0px #D1D2D6;
     }
 
     .header__menu-active .header__hamburger-bar:nth-child(1) {

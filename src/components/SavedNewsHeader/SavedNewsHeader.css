@@ -1,0 +1,16 @@
+.savednewsheader {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 120px 104px 56px 104px;
+}
+
+.savednewsheader__title {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-weight: 400;
+    max-width: calc(100% -208px);
+    font-size: 18px;
+    line-height: 1.33;
+    color: rgba(26, 27, 34, 0.5);
+}
