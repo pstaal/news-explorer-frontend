@@ -26,6 +26,7 @@ function NewsCardList(props) {
 
     if (props.cardData) {
         const filteredCards = filterArray(props.cardData, counter);
+        const showButton = filteredCards.length !== props.cardData.length;
 
         return (
             <section className="cardlist">
@@ -33,7 +34,7 @@ function NewsCardList(props) {
                 <div className="cardlist__container">
                     {filteredCards.map((card) => <NewsCard card={card}/>)}
                 </div>
-                <button className="cardlist__button" onClick={() => setCounter(counter + 3)}>Show more</button>
+                {showButton && <button className="cardlist__button" onClick={() => setCounter(counter + 3)}>Show more</button>}
             </section>
         )
     }
