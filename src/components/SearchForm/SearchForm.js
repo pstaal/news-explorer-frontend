@@ -21,7 +21,7 @@ function SearchForm(props) {
     return (
       <form className="search" onSubmit={submitSearch}>
         <input value={searchTerm} onChange={changeSearch} className="search__input" type="text" placeholder="Enter topic" />
-        <button ref={buttonRef} type="submit" disabled={!showButton} className={`search__button ${!showButton ? "search__button-disabled" : ""}`}>{showButton ? 'Search' : 'Disabled'}</button>
+        <button ref={buttonRef} type="submit" disabled={!showButton} className={`search__button ${!showButton ? "search__button-disabled" : ""}`}>Search</button>
       </form>
     )
   }

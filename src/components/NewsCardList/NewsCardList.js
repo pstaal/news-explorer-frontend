@@ -1,6 +1,5 @@
 import './NewsCardList.css';
 import notFound from '../../images/not-found.svg';
-import cardData from '../../utils/cardData';
 import NewsCard from '../../components/NewsCard/NewsCard';
 import React from 'react';
 

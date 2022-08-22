@@ -5,7 +5,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '2',
@@ -13,7 +14,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '3',
@@ -21,7 +23,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '4',
@@ -29,7 +32,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '5',
@@ -37,7 +41,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '6',
@@ -45,7 +50,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '7',
@@ -53,7 +59,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     },
                     {
                         id: '8',
@@ -61,7 +68,8 @@ const cards = [
                         date: 'November 4, 2020',
                         title: 'Everyone Needs a Special "Sit Spot" in Nature',
                         text: 'Ever since I read Richard Louvs influential book, "Last Child in the Woods," the idea of having a special "sit spot" has stuck with me. This advice, which Louv attributes to nature educator Jon Young, is for both adults and children to find...',
-                        category: 'Treehugger'
+                        category: 'Nature',
+                        source: 'Treehugger'
                     }
 ];
 

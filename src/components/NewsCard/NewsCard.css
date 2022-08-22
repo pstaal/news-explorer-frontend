@@ -31,6 +31,22 @@
     color: #000000;
 }
 
+.delete__button {
+    background-color: #fff;
+    background-image: url('../../images/trash.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
 .newscard__button {
     background-color: #fff;
     background-image: url('../../images/bookmark.svg');
@@ -45,6 +61,21 @@
     position: absolute;
     top: 24px;
     right: 24px;
+}
+
+.newscard__category {
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.71;
+    border-radius: 8px;
+    position: absolute;
+    padding: 8px 20px;
+    top: 24px;
+    left: 24px;
 }
 
 .newscard__button:hover {
@@ -84,7 +115,7 @@
     margin-bottom: 18px;
 }
 
-.newscard__category {
+.newscard__source {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Slab', serif;
@@ -99,6 +130,40 @@
     .newscard__title {
         font-size: 22px;
         line-height: 1.01;
+    }
+
+    .newscard__category {
+        top: 8px;
+        left: 8px;
+    }
+
+    .newscard__button {
+        top: 8px;
+        right: 8px;
+    }
+
+    .newscard__button:hover + .newscard__tooltip {
+        top: 8px;
+        right: 53px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .newscard__category {
+        top: 16px;
+        left: 16px;
+    }
+
+    .newscard__button {
+        top: 16px;
+        right: 16px;
+    }
+
+    .newscard__button:hover + .newscard__tooltip {
+        top: 16px;
+        right: 61px;
     }
 
 }

@@ -8,6 +8,7 @@ import SavedNews from '../SavedNews/SavedNews';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
 
 function App() {
+
   return (
     <div className="page">
     <div className="overlay"></div>
