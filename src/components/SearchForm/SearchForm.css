@@ -31,6 +31,10 @@
     color: #B6BCBF;
 }
 
+button.search__button.search__button-clicked {
+    background-color: #2A65CC;
+}
+
 .search__button {
     position: absolute;
     box-sizing: border-box;
@@ -46,6 +50,15 @@
     padding: 20px 56px;
     cursor: pointer;
     border: none;
+}
+
+.search__button:hover {
+    background: #347EFF;
+}
+
+.search__button.search__button-disabled {
+    color: #B6BCBF;
+    background-color: #E6E8EB;
 }
 
 @media screen and (max-width: 580px) {

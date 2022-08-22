@@ -1,6 +1,6 @@
 import Nav from '../Navigation/Nav';
 import './Header.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 
 function Header() {
 
@@ -10,18 +10,18 @@ function Header() {
     };
 
     const location = useLocation();
-    const whiteBackground = location.pathname === '/saved-news';
+    const isSavedArticlesUrl = location.pathname === '/saved-news';
 
     return (
-      <div className={`header ${whiteBackground ? 'header-black' : ''}`}>
-        <div className={`header__wrapper ${whiteBackground ? 'header-black' : ''}`}>
-            <h2 className={`header__logo ${whiteBackground ? 'header-black' : ''}`}>NewsExplorer</h2>
+      <div className={`header ${isSavedArticlesUrl ? 'header-black' : ''}`}>
+        <div className={`header__wrapper ${isSavedArticlesUrl ? 'header-black' : ''}`}>
+            <Link to={'/'} className={`header__logo ${isSavedArticlesUrl ? 'header-black' : ''}`}>NewsExplorer</Link>
             <div className="header__hamburger" onClick={openMobileMenu}>
-                <span className={`header__hamburger-bar ${whiteBackground ? 'header-black' : ''}`}></span>
-                <span className={`header__hamburger-bar ${whiteBackground ? 'header-black' : ''}`}></span>
+                <span className={`header__hamburger-bar ${isSavedArticlesUrl ? 'header-black' : ''}`}></span>
+                <span className={`header__hamburger-bar ${isSavedArticlesUrl ? 'header-black' : ''}`}></span>
             </div>
         </div>
-        <Nav whiteBackground={whiteBackground}/>
+        <Nav isSavedArticlesUrl={isSavedArticlesUrl}/>
       </div>
     )
   }

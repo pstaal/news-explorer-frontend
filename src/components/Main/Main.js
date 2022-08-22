@@ -18,10 +18,11 @@ function Main() {
         setLoading(true)
         sleep().then(() => {
             setCardData(cards);
-            setLoading(false);
         }).catch(() => {
-            setCardData([]);
+            setCardData([]);    
+        }).finally(() => {
             setLoading(false);
+            document.querySelector('.search__button').classList.remove('search__button-clicked');
         });
     }
 

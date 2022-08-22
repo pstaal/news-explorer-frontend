@@ -82,6 +82,10 @@
     line-height: 1.33;
 }
 
+.cardlist__button:hover {
+    background-color: #E8E8E8;
+}
+
 @media screen and (max-width: 1100px) {
     .cardlist__container {
         grid-template-columns: repeat( auto-fit, minmax(224px, 1fr));

@@ -16,6 +16,8 @@
 }
 
 .header__logo {
+    text-decoration: none;
+    color: inherit;
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
     color: #fff;
