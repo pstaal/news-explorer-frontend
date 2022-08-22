@@ -1,7 +1,29 @@
 import './PopupWithForm.css';
-
+import React from 'react';
 
 function PopupWithForm({closeModal, isModalOpen}) {
+
+    React.useEffect(() => {
+        const closeOnEscape = (e) => {
+          if(e.keyCode === 27){
+            closeModal()
+          }
+        }
+
+        const closeOnClick = (e) => {
+            if(e.target.classList.contains('popup') && !e.target.classList.contains('popup__container')){
+                closeModal()
+            }
+        }
+        
+        window.addEventListener('click', closeOnClick);
+        window.addEventListener('keydown', closeOnEscape);
+
+      return () => {
+        window.removeEventListener('click', closeOnClick);
+        window.removeEventListener('keydown', closeOnEscape)
+      };
+    },[])
 
     return (
        <div className={`popup ${isModalOpen? 'popup_opened' : ''}`}>
