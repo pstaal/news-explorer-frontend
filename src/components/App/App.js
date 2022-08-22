@@ -6,6 +6,7 @@ import Main from '../Main/Main';
 import Footer from '../Footer/Footer';
 import SavedNews from '../SavedNews/SavedNews';
 import SavedNewsHeader from '../SavedNewsHeader/SavedNewsHeader';
+import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/saved-news" element={<><SavedNewsHeader/><SavedNews/></>} />
         </Routes>
       <Footer />
+      <PopupWithForm/>
     </div>
   );
 }
