@@ -2,7 +2,7 @@ import Nav from '../Navigation/Nav';
 import './Header.css';
 import { useLocation, Link } from 'react-router-dom';
 
-function Header() {
+function Header(props) {
 
     const openMobileMenu = () => {
         document.querySelector('.header').classList.toggle('header__menu-active');
@@ -21,7 +21,7 @@ function Header() {
                 <span className={`header__hamburger-bar ${isSavedArticlesUrl ? 'header-black' : ''}`}></span>
             </div>
         </div>
-        <Nav isSavedArticlesUrl={isSavedArticlesUrl}/>
+        <Nav isSavedArticlesUrl={isSavedArticlesUrl} openModal={props.openModal}/>
       </div>
     )
   }

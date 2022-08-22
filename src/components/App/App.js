@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import React from 'react';
 
 import './App.css';
 import Header from '../Header/Header';
@@ -10,16 +11,26 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 function App() {
 
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
   return (
     <div className="page">
     <div className="overlay"></div>
-      <Header />
+      <Header openModal={openModal}/>
         <Routes>
           <Route exact path="/" element={ <Main />} />
           <Route path="/saved-news" element={<><SavedNewsHeader/><SavedNews/></>} />
         </Routes>
       <Footer />
-      <PopupWithForm/>
+      <PopupWithForm closeModal={closeModal} isModalOpen={isModalOpen}/>
     </div>
   );
 }
