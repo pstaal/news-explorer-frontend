@@ -10,12 +10,26 @@ function Main() {
 
     const [loading, setLoading] = React.useState(false);
     const [cardData, setCardData] = React.useState(null);
+    const [searchError, setSearchError] = React.useState(false);
+    const [apiError, setApiError] = React.useState(false);
 
-    //simulate asynchronous succesful call to api
-    const sleep = () => new Promise(resolve => setTimeout(resolve, 5000));
-    //use Promise.reject to simulate a failing call to api
+    React.useEffect(() => {
+       const savedCards = JSON.parse(localStorage.getItem("cards"));
+       if(savedCards) {
+        setCardData(savedCards);
+       }
+    },[])
+
 
     const onSearchSubmit = (searchTerm) => {
+        setSearchError(false);
+        setApiError(false);
+
+        if (!searchTerm) {
+            setSearchError(true);
+            return;
+        }
+
         setLoading(true)
         const currentDate = new Date();
         const currentDateIso = currentDate.toISOString();
@@ -29,10 +43,10 @@ function Main() {
 
         newsApi.search(params).then((res) => {
             setCardData(res.articles);
-
+            if (res.articles.length > 0) localStorage.setItem("cards", JSON.stringify(res.articles));
+            if (res.articles.length === 0) localStorage.clear();
         }).catch((error)=> {
-            console.log(error);
-
+            setApiError(true);
         }).finally(() => {
             setLoading(false);
             document.querySelector('.search__button').classList.remove('search__button-clicked');
@@ -42,9 +56,9 @@ function Main() {
 
     return (
         <>
-            <Hero onSubmit={onSearchSubmit}/>
+            <Hero onSubmit={onSearchSubmit} searchError={searchError}/>
             {loading && <Preloader/>}
-            {!loading && <NewsCardList cardData={cardData} />}
+            {!loading && <NewsCardList cardData={cardData} apiError={apiError}/>}
             <About />
         </>
     );

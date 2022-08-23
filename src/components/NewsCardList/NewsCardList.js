@@ -23,7 +23,7 @@ function NewsCardList(props) {
         return newArray;
     }
 
-    if (props.cardData) {
+    if (props.cardData.length > 0) {
         const filteredCards = filterArray(props.cardData, counter);
         const showButton = filteredCards.length !== props.cardData.length;
 
@@ -38,7 +38,19 @@ function NewsCardList(props) {
         )
     }
 
-    if(!props.cardData) {
+    if(props.apiError) {
+        return (
+            <section className="nocards">
+                <div className="nocards__content">
+                    <img src={notFound} alt="nothing found" className="nocards__image" />
+                    <p className="nocards__text">Sorry, something went wrong during the request. There may be a connection issue or the server may be down. Please try again later.</p>
+                </div>
+            </section>
+
+        )
+    }
+
+    if(props.cardData.length === 0) {
         return (
             <section className="nocards">
                 <div className="nocards__content">
@@ -49,6 +61,8 @@ function NewsCardList(props) {
             </section>
         )
     }
+
+   
 
 }
   

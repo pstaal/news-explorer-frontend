@@ -34,6 +34,18 @@
     margin-bottom: 88px;
 }
 
+.hero__search-error {
+    display: none;
+    color:  #FF0000;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.hero__search-error-show {
+    display: block;
+}
+
 @media screen and (max-width: 1000px) {
     .hero__content {
         max-width: 455px;

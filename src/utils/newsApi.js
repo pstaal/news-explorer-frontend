@@ -14,14 +14,6 @@ class NewsApi {
         Object.keys(params).forEach(key => url.searchParams.append(key, params[key]));
         return fetch(url).then(res => this._handleResponse(res)); 
       }
-    
-      getInitialCards(token) {
-            return fetch(`${this._baseUrl}/cards`, {
-              headers: { ...this._headers,
-                authorization: `Bearer ${token}`,
-            }})
-            .then(res => this._handleResponse(res)); 
-      }
 
 };
 

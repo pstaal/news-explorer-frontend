@@ -1,5 +1,6 @@
 import './NewsCard.css';
 import { useLocation } from 'react-router-dom';
+import dateFormatter from '../../utils/dateformatter';
 
 
 function NewsCard({card}) {
@@ -14,7 +15,7 @@ function NewsCard({card}) {
         {isSavedArticlesUrl ? <button className='delete__button'></button> : <button className='newscard__button'></button>}
         <p className="newscard__tooltip">Sign in to save articles</p>
         <div className="newscard__content">
-            <p className="newscard__date">{card.publishedAt}</p>
+            <p className="newscard__date">{dateFormatter(card.publishedAt)}</p>
             <h1 className="newscard__title">{card.title}</h1>
             <p className="newscard__text">{card.description}</p>
             <p className="newscard__source">{card.source.name}</p>
