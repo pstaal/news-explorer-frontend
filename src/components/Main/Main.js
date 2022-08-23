@@ -4,6 +4,7 @@ import React from 'react';
 import Preloader from "../Preloader/Preloader";
 import NewsCardList from '../NewsCardList/NewsCardList';
 import cards from "../../utils/cardData";
+import newsApi from "../../utils/newsApi";
 
 function Main() {
 
@@ -16,14 +17,27 @@ function Main() {
 
     const onSearchSubmit = (searchTerm) => {
         setLoading(true)
-        sleep().then(() => {
-            setCardData(cards);
-        }).catch(() => {
-            setCardData([]);    
+        const currentDate = new Date();
+        const currentDateIso = currentDate.toISOString();
+
+        const weekOldDate = new Date();
+        weekOldDate.setDate(weekOldDate.getDate() - 7);
+        
+        const weekOldDateIso = weekOldDate.toISOString();
+
+        const params = {q:searchTerm, apiKey:'bfe2c6b3828a42b98edf272054bafaa6', from: weekOldDateIso, to: currentDateIso, pageSize: 100};
+
+        newsApi.search(params).then((res) => {
+            setCardData(res.articles);
+
+        }).catch((error)=> {
+            console.log(error);
+
         }).finally(() => {
             setLoading(false);
             document.querySelector('.search__button').classList.remove('search__button-clicked');
         });
+
     }
 
     return (

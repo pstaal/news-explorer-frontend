@@ -87,6 +87,7 @@
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 8px;
+    cursor: pointer;
 }
 
 .popup__text {
@@ -100,9 +101,9 @@
     line-height: 1.21;
 }
 
-.popup__text > a {
-    text-decoration: none;
+.popup__text > span {
     color: rgba(47, 113, 229, 1);
+    cursor: pointer;
 }
 
 

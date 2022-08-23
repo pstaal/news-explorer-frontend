@@ -9,15 +9,15 @@ function NewsCard({card}) {
 
     return (
      <div className="newscard">
-        <img className="newscard__image" src={card.image} alt="card"/>
+        <img className="newscard__image" src={card.urlToImage} alt="card"/>
         {isSavedArticlesUrl ? <button className='newscard__category'>{card.category}</button> : ''}
         {isSavedArticlesUrl ? <button className='delete__button'></button> : <button className='newscard__button'></button>}
         <p className="newscard__tooltip">Sign in to save articles</p>
         <div className="newscard__content">
-            <p className="newscard__date">{card.date}</p>
+            <p className="newscard__date">{card.publishedAt}</p>
             <h1 className="newscard__title">{card.title}</h1>
-            <p className="newscard__text">{card.text}</p>
-            <p className="newscard__source">{card.source}</p>
+            <p className="newscard__text">{card.description}</p>
+            <p className="newscard__source">{card.source.name}</p>
         </div>
      </div>
     )
